@@ -1,0 +1,582 @@
+@charset "utf-8";
+
+/* 全体 */
+body {
+    /* 使用するフォントを指定しました */
+    font-family: "Kaisei Opti", serif;
+    /* フォントサイズ */
+    font-size: 20px;
+    /* もともとついていた余白をとしました */
+    margin: 0;
+}
+
+
+/* トップ画面 */
+.hero {
+    /* 幅を画面いっぱいに設定しました */
+    width: 100vw;
+    /* 高さを画面いっぱいに設定しました */
+    height: 100vh;
+    /* タイトル文字の基準位置を設定しました */
+    position: relative;
+    /* はみ出した部分を表示させなくしました */
+    overflow: hidden;
+}
+
+/* タイトルの背景画像の設定 */
+.headerimage {
+    /* 画像の幅を画面いっぱいに広げました */
+    width: 100%;
+    /* 画像の高さを画面いっぱいに広げました */
+    height: 100%;
+    /* 画像を比率を変えずに枠いっぱいに敷き詰めました */
+    object-fit: cover;
+    /* トップ画面の一番奥に配置させました */
+    z-index: 0;
+}
+
+/* タイトル文字 */
+.hero strong {
+    /* .heroを基準として上下左右から中央にタイトル文字を配置しました */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* タイトル文字のサイズ */
+    font-size: 80px;
+    /* 文字色 */
+    color: rgb(235, 225, 220);
+    /* 文字に影をつけました */
+    text-shadow: 6px 6px 10px #0b0000;
+    /* 画像の一つ手前に配置しました */
+    z-index: 1;
+}
+
+@media screen and (max-width: 1200px) {
+    .hero strong {
+        font-size: 40px;
+    }
+    
+}
+
+
+/* ヘッダー */
+/* 左上ロゴマーク */
+header {
+    /* 要素を並べる幅を全体に指定しました */
+    width: 100%;
+    /* ロゴマークとメニューを横並びにしました */
+    display: flex;
+    /* ロゴマークとメニューの並び方を両極端に配置しました */
+    justify-content: space-between;
+    /* 動画でやっていたのですが意味がわからなかったのでコメントアウトで残しました */
+    /* align-items: center; */
+    /* ロゴとメニューを固定しました */
+    position: fixed;
+    /* メニューとロゴを画面のいちばん手前に配置しました */
+    z-index: 10;
+    /* ロゴの位置を左上に配置しました */
+    top: 0;
+    left: 0;
+}
+/* ロゴマーク */
+.header-logo {
+    /* もともとついていた余白を取りました */
+    margin: 0;
+    /* 左端から少し余白を持たせました */
+    margin-left: 10px;
+}
+.header-logo a {
+    /* 動画でやっていたのですが意味がわからないのでコメントアウトしました */
+    /* display: block; */
+}
+
+/* ul */
+.navlist {
+    /* もともとついていた余白をとりました */
+    margin: 0;
+    padding: 0;
+    /* メニューを横並びにしました */
+    display: flex;
+    /* メニューの並び方を設定しました */
+    justify-content: space-between;
+    /* 箇条書きの点を消しました */
+    list-style: none;
+    /* フォントのサイズ設定 */
+    font-size: 30px;
+
+}
+/* li */
+.navitem a {
+    /* 動画でやっていたのですが意味がわからなかったのでコメントアウトしました */
+    /* display: block; */
+    /* メニューの文字色 */
+    color: beige;
+    /* メニューの文字の背景色 */
+    background-color: rgba(79, 188, 212, 0.574);
+    /* 下線を取りました */
+    text-decoration: none;
+    /* メニュー同士の間隔をあけました */
+    margin: 0 10px;
+    /* 要素の中に幅を持たせました */
+    padding: 5px;
+    /* リンクの背景の角を丸くしました */
+    border-radius: 10px;
+    /* 無職の下線を設定しました */
+    border-bottom: 2px solid transparent;
+    /* 時間差で下線が現れるようにしました */
+    transition: .8s;
+
+
+    
+}
+.navitem a:hover {
+    /* リンクにカーソルを合わせた時の文字色 */
+    color: rgb(45, 18, 3);
+    /* 時間差で現れる下線の色 */
+    border-bottom: 2px solid rgb(45, 18, 3);
+}
+
+@media screen and (max-width: 1200px) {
+    .navlist {
+        font-size: 20px;
+    }
+    
+}
+
+
+/* About */
+/* h1 */
+.headline {
+    /* 主軸の方向を基準に中央揃えをしました */
+    text-align: center;
+    /* 文字の太さを変えました */
+    font-weight: bold;
+    /* 上下に余白をつけました */
+    padding: 40px 0;
+
+}
+/* figure Aboutの画像と記事 */
+.about {
+    /* 写真と文章を横並びにしました */
+    display: flex;
+    /* 写真と文章を交差軸を基準に中央に揃えました */
+    align-items: center;
+}
+/* figcaption Aboutのタイトルと記事 */
+.aboutcaption {
+    /* 写真と文章の間に余白をあけました */
+    padding-left: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+    .about {
+        display: block;
+    }
+    .about img {
+        max-width: 100%;
+    }
+}
+
+/* Feature */
+.section.section-secondary {
+    /* Featureの背景色 */
+    background-color: rgba(219, 189, 240, 0.573);
+}
+/* ul */
+.grid {
+    /* 記事を横並びにしました */
+    display: flex;
+    /* もともとついていた余白を消しました */
+    padding: 0;
+    margin: 0;
+}
+/* li */
+.grid-item {
+    /* 箇条書きの点を消しました */
+    list-style: none;
+    
+}
+
+
+/* 横幅設定 */
+/* 親要素に対して子要素がそれぞれの数の場合の割合を設定しました */
+.grid-col-2 > .grid-item {
+    width: 50%;
+}
+
+.grid-col-3 > .grid-item {
+    width: 33.3%;
+}
+
+.grid-col-4 > .grid-item {
+    width: 25%;
+}
+/* dl Featureのひとつの記事の全体 */
+.feature {
+    /* 記事を中央揃えにしました */
+    text-align: center;
+}
+/* Featureの各記事のタイトル */
+.feature-headline {
+    /* 記事のタイトルを太字にしました */
+    font-weight: bold;
+    
+}
+/* Featureの記事の画像 */
+.feature-img {
+    /* 画像の上下に余白を作りました */
+    margin: 40px 0;
+}
+/* Featureの記事の文章部分 */
+.feature-description {
+    /* 文章記事だけ左に揃えました */
+    text-align: left;
+    /* 文章の下と左右に余白を持たせました */
+    margin: 0 10px 40px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .grid {
+        display: block;
+    }
+    .grid-col-2 > .grid-item,
+    .grid-col-3 > .grid-item,
+    .grid-col-4 > .grid-item {
+        width: 100%;
+    }
+}
+
+/* Blog */
+/* 各Blog記事の全体 */
+.card-link {
+    /* リンク全体をクリックできるようにしました */
+    display: block;
+    /* リンクの文字色を変えました */
+    color: #333;
+    /* リンクの下線を消しました */
+    text-decoration: none;
+    /* spanのNewの文字の配置の基準を決めました */
+    position: relative;
+    /* 時間差でリンクの色が変わるようにしました */
+    transition: .6s;
+}
+.card-link:hover {
+    /* リンクが時間差で変わった後の色を設定しました */
+    background-color: #eee;
+}
+/* Newの文字 */
+.card-label {
+    /* 基準位置に対して配置を設定しました */
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* Newの文字と背景色の設定 */
+    color: #fff;
+    background-color: #2d7583;
+    /* 文字の周りに余白を持たせました */
+    padding: 5px 10px;
+    
+
+}
+/* Blog記事の画像 */
+.card-image {
+    /* Blogの画像の高さと幅を調整しました */
+    width: 90%;
+    height: auto;
+}
+/* dl Blog筆者とアイコン */
+.avatar {
+    /*  アイコンと筆者名を横並びにしました */
+    display: flex;
+    /* アイコンと筆者名の並び順を変えました */
+    flex-direction: row-reverse;
+    /* 筆者名を交差軸を基準に中央揃えにしました */
+    align-items: center;
+    /* アイコンと筆者名を左始まりにしました */
+    justify-content: start;
+}
+/* Blog筆者の名前 */
+.avatar-name {
+    /* アイコンと筆者名との間に余白を持たせました */
+    padding-left: 15px;
+}
+/* Blog筆者のアイコン */
+.avatar-image {
+    /* アイコンにもともとついていたmarginを取り除きました */
+    margin: 0;
+}
+/* Blogのアイコン画像 */
+.avatar-image img {
+    /* アイコンを丸くしました */
+    border-radius: 50px;
+}
+/* Blog Pageボタンのリンク */
+.button {
+    /* 文字を箱に入れる？ */
+    /* インライン要素とブロック要素の性質を併せ持たせることで、のちにボタンを中央に移動したり、上下に間隔をつけられるようにしています */
+    display: inline-block;
+    /* ボタンの文字色 */
+    color: #2b2a2a;
+    /* ボタンの文字の太さ */
+    font-weight: bold;
+    /* ボタンの背景色 */
+    background: rgb(158, 211, 211);
+    /* ボタンないの文字を中央揃えにしました */
+    text-align: center;
+    /* ボタン内に余白を持たせました */
+    padding: 15px 60px;
+    /* ボタンの下に余白を持たせました */
+    margin-bottom: 30px;
+    /* 下線を消しました */
+    text-decoration: none;
+    /* ボタンの角を丸くしました */
+    border-radius: 5px;
+    /* ボタンの枠線を消しました */
+    border: none;
+    /* 字体を合わせました */
+    font: inherit;
+
+    /* ボタンに影をつけました */
+    box-shadow: 5px 5px 5px #bbb;
+    /* 時間差でボタンの影を変化させる時間を設定しました */
+    transition: .4s;
+
+}
+.button:hover {
+    /* 時間差で影を消しました */
+    box-shadow: 0 0 0 #bbb;
+}
+/* ボタン共通設定 */
+.section-button {
+    /* ボタンとBlog記事の間に余白を持たせました */
+    margin-top: 40px;
+    /* ボタンの位置を主軸を基準に中央揃えにしました */
+    text-align: center;
+}
+
+/* アンケート */
+.form {
+    /* Surveyの背景色 */
+    background-color: #dfcaab92;
+    /* Surveyの文字の太さ */
+    font-weight: bold;
+}
+/* 項目の全体 */
+.form-inner {
+    /* 幅を指定しました */
+    width: 700px;
+    /* 中央に寄せました */
+    margin: 0 auto;
+
+}
+/* 各項目 */
+.form-row {
+    /* 項目と入力欄を横並びにしました */
+    display: flex;
+    /* 項目を交差軸の方向に中央に揃えました */
+    align-items: center;
+    /* 各項目の間に余白を作りました */
+    margin-bottom: 15px;
+
+}
+/* 項目のタイトル */
+.form-title {
+    /* 項目の幅を設定しました */
+    width: 250px;
+    /* 意味がわからないので採用しませんでした */
+    /* display: inline-block; */
+}
+/* 入力欄 */
+.input,
+.select,
+.textarea {
+    /* 幅を指定しました */
+    width: 300px;
+    /* 意味がわからないので省きました */
+    /* box-sizing: border-box; */
+    /* 入力欄の角を丸くしました */
+    border-radius: 5px;
+    /* 枠線のデザインを変えました */
+    border: 1px solid #f6f3f3;
+}
+/* チェックボックスの選択肢 */
+.checkbox-group {
+    /* チェックボックスの選択肢を並べる幅を指定しました */
+    width: 300px;
+}
+/* ご意見の入力欄 */
+.textarea {
+    /* メッセージ入力欄の最低の高さを設定しました */
+    min-height: 100px;
+}
+/* 送信ボタン */
+.form-button {
+    /* 主軸の方向に中央揃えをしました */
+    text-align: center;
+    /* ボタンの上下に余白を持たせました */
+    margin: 40px 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .form-row {
+        display: block;
+        flex-direction: column;
+    }
+    .form-inner {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .form-title {
+        display: block;
+    }
+    
+
+}
+
+.googleform {
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .googleform {
+        width: auto;
+        height: auto;
+    }
+}
+
+/* Links */
+.link-container {
+    /* リンクをフレックスボックスにしました */
+    display: flex;
+    /* フレックスボックスを縦に並べました */
+    flex-direction: column;
+    /* 中央揃えをしました */
+    align-items: center;
+}
+.link-items {
+    /* 文字色 */
+    color: #333;
+    /* 下線を消しました */
+    text-decoration: none;
+    /* 下線を透明に設定しました */
+    border-bottom: 2px solid transparent;
+    /* 時間差で下線が現れるまでの時間 */
+    transition: .6s;
+}
+/* リンクにカーソルを当てた時 */
+.link-items:hover {
+    /* 文字色 */
+    color: #49068b;
+    /* 時間差で現れる下線の色 */
+    border-bottom: 2px solid #49068b;
+}
+
+/* フッター */
+.footer {
+    /* フッターの背景色 */
+    background-color: #8cd9e8ac;
+    /* フッターの文字色 */
+    color: #333;
+}
+.footer-map {
+    /* 地図と会社名、住所を横並びにしました */
+    display: flex;
+    /* 交差軸の方向に中央揃えにしました */
+    align-items: center;
+    /* わからなかったので採用しませんでした */
+    /* justify-content: center; */
+    /* もともとついていた余白を取りました */
+    margin: 0;
+    /* 地図と会社名、住所の周りに余白をつけました */
+    padding: 40px;
+
+}
+/* 地図 */
+.footer-map iframe {
+    /* 地図の幅を設定しました */
+    width: 60%;
+}
+/* 会社名と住所 */
+.footer-mapinfo {
+    /* マップと住所の間に余白を持たせました */
+   padding: 15px;
+}
+/* アイコンと会社名 */
+.footer-maplogo {
+    /* アイコンと会社名を横並びにしました */
+    display: flex;
+    /* 会社名を立て方向に中央揃えしました */
+    align-items: center;
+}
+
+/* 住所欄 */
+.footer-mapaddress {
+    /* GoogleMapの字体を変えました */
+    font-style: normal;
+}
+/* マップのリンク */
+.footer-mapaddress a {
+    /* マップのリンクの文字色を変えました */
+    color: #333;
+}
+/* フッター下部の線 */
+.footer-line {
+    /* 下部の線の色 */
+    border-color: #58565c;
+    /* 余計余白を取りました */
+    margin: 0;
+}
+/* コピーライト部分 */
+.footer-copy {
+    /* インライン要素であるsmallタグの文字を画面いっぱいの横幅の箱に入れる */
+    /* 中央揃えできるようにする */
+    display: block;
+    /* 主軸の方向に中央揃えにしました */
+    text-align: center;
+    /* 要素の中に余白を持たせました */
+    padding: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .footer-map {
+        display: block;
+    }
+    .footer-map iframe {
+        width: 100%;
+    }
+}
+
+
+/* トップに戻るボタン */
+.top-button a {
+    /* ボタンの文字色 */
+    color: beige;
+    /* ボタンの背景色 */
+    background-color: rgba(79, 188, 212, 0.574);
+    /* ボタンのフォントサイズ */
+    font-size: 24px;
+    /* 下線を消しました */
+    text-decoration: none;
+    /* ボタンの角を丸くしました */
+    border-radius: 10px;
+    /* ボタンの位置を右下に固定しました */
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    /* 画面のいちばん手前に置きました */
+    z-index: 10;
+    /* 下線の色を透明に設定しました */
+    border-bottom: 2px solid transparent;
+    /* 時間差で下線が現れるまでの時間を設定しました */
+    transition: .8s;
+}
+/* トップボタンの上にカーソルを当てた時 */
+.top-button a:hover {
+    /* トップボタンにカーソルを乗せた時の文字色 */
+    color: rgb(45, 18, 3);
+    /* 時間差で現れる下線の色 */
+    border-bottom: 2px solid rgb(45, 18, 3);
+}
