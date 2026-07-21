@@ -68,7 +68,7 @@ header {
     /* ロゴマークとメニューを横並びにしました */
     display: flex;
     /* ロゴマークとメニューの並び方を両極端に配置しました */
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* 動画でやっていたのですが意味がわからなかったのでコメントアウトで残しました */
     /* align-items: center; */
     /* ロゴとメニューを固定しました */
@@ -77,22 +77,26 @@ header {
     z-index: 10;
     /* ロゴの位置を左上に配置しました */
     top: 0;
-    left: 0;
+    /* left: 0; */
 }
 /* ロゴマーク */
 .header-logo {
     /* もともとついていた余白を取りました */
     margin: 0;
     /* 左端から少し余白を持たせました */
-    margin-left: 10px;
+    margin-left: 0 5%;
+    width: 10%;
 }
 .header-logo a {
     /* 動画でやっていたのですが意味がわからないのでコメントアウトしました */
     /* display: block; */
+    width: 100%;
+    height: 100%;
 }
 
 /* ul */
 .navlist {
+    width: 80%;
     /* もともとついていた余白をとりました */
     margin: 0;
     padding: 0;
@@ -139,7 +143,7 @@ header {
 
 @media screen and (max-width: 1200px) {
     .navlist {
-        font-size: 20px;
+        font-size: 50%;
     }
     
 }
@@ -172,9 +176,14 @@ header {
 @media screen and (max-width: 1200px) {
     .about {
         display: block;
+         margin: 0;
+
+    }
+    .aboutcaption {
+        padding: 0;
     }
     .about img {
-        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -442,8 +451,8 @@ header {
 
 @media screen and (max-width: 1200px) {
     .googleform {
-        width: auto;
-        height: auto;
+        /* width: auto; */
+        /* height: auto; */
     }
 }
 
