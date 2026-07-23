@@ -68,7 +68,7 @@ header {
     /* ロゴマークとメニューを横並びにしました */
     display: flex;
     /* ロゴマークとメニューの並び方を両極端に配置しました */
-    /* justify-content: space-between; */
+    justify-content: space-between;
     /* 動画でやっていたのですが意味がわからなかったのでコメントアウトで残しました */
     /* align-items: center; */
     /* ロゴとメニューを固定しました */
