@@ -9,6 +9,10 @@ body {
     /* もともとついていた余白をとしました */
     margin: 0;
 }
+nav {
+    display: flex;
+    width: 100%;
+}
 
 
 /* トップ画面 */
@@ -54,6 +58,7 @@ body {
 
 @media screen and (max-width: 1200px) {
     .hero strong {
+        /* フォントサイズの設定 */
         font-size: 40px;
     }
     
@@ -66,11 +71,10 @@ body {
     /* もともとついていた余白を取りました */
     margin: 0;
     /* 左端から少し余白を持たせました */
-    margin-left: 0 10px;
+    margin: 0 10px;
+
 }
-.header-logo a {
-    /* 動画でやっていたのですが意味がわからないのでコメントアウトしました */
-    /* display: block; */
+.header-logo img {
     width: 80px;
     height: 80px;
 }
@@ -158,14 +162,16 @@ nav {
 
 @media screen and (max-width: 1200px) {
     .about {
+        /* 画像と記事の横並びを解消しました */
         display: block;
-         margin: 0;
+        margin: 0;
 
     }
     .aboutcaption {
         padding: 0;
     }
     .about img {
+        /* 画像の最高幅を設定しました */
         width: 100%;
     }
 }
@@ -231,8 +237,10 @@ nav {
 
 @media screen and (max-width: 1200px) {
     .grid {
+        /* 画像と記事の横並びを解消しました */
         display: block;
     }
+    /* 横並びにした時の幅の設定を解消して、最高幅を設定しました */
     .grid-col-2 > .grid-item,
     .grid-col-3 > .grid-item,
     .grid-col-4 > .grid-item {
@@ -413,15 +421,21 @@ nav {
 
 @media screen and (max-width: 1200px) {
     .form-row {
+        /* 項目と入力欄の横並びを解消しました */
         display: block;
+        /* 項目と入力欄を縦並びにしました */
         flex-direction: column;
     }
     .form-inner {
+        /* フォーム全体の幅を設定しました */
         width: 100%;
+        /* 最高幅を設定しました */
         max-width: 300px;
+        /* 中央揃えにしました */
         margin: 0 auto;
     }
     .form-title {
+        /* 項目と選択肢や入力欄の横並びを解消しました */
         display: block;
     }
     
@@ -429,13 +443,16 @@ nav {
 }
 
 .googleform {
+    /* 主軸の方向で中央揃えにしました */
     text-align: center;
 }
 
 @media screen and (max-width: 1200px) {
     .googleform {
-        /* width: auto; */
+        /* 幅と高さを設定しました */
+        /* width: 80%; */
         /* height: auto; */
+        /* margin: 0 auto; */
     }
 }
 
@@ -534,9 +551,11 @@ nav {
 
 @media screen and (max-width: 1200px) {
     .footer-map {
+        /* 地図と会社名、住所の横並びを解消しました */
         display: block;
     }
     .footer-map iframe {
+        /* 地図の幅を設定しました */
         width: 100%;
     }
 }
