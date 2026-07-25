@@ -103,7 +103,7 @@ header {
     /* メニューを横並びにしました */
     display: flex;
     /* メニューの並び方を設定しました */
-    justify-content: space-between;
+    justify-content: flex-end;
     /* 箇条書きの点を消しました */
     list-style: none;
     /* フォントのサイズ設定 */
