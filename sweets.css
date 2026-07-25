@@ -60,80 +60,53 @@ body {
 }
 
 
-/* ヘッダー */
-/* 左上ロゴマーク */
-header {
-    /* 要素を並べる幅を全体に指定しました */
-    width: 100%;
-    /* ロゴマークとメニューを横並びにしました */
-    display: flex;
-    /* ロゴマークとメニューの並び方を両極端に配置しました */
-    justify-content: space-between;
-    /* 動画でやっていたのですが意味がわからなかったのでコメントアウトで残しました */
-    /* align-items: center; */
-    /* ロゴとメニューを固定しました */
-    position: fixed;
-    /* メニューとロゴを画面のいちばん手前に配置しました */
-    z-index: 10;
-    /* ロゴの位置を左上に配置しました */
-    top: 0;
-    /* left: 0; */
-}
+
 /* ロゴマーク */
 .header-logo {
     /* もともとついていた余白を取りました */
     margin: 0;
     /* 左端から少し余白を持たせました */
-    margin-left: 0 5%;
-    width: 10%;
+    margin-left: 0 10px;
 }
 .header-logo a {
     /* 動画でやっていたのですが意味がわからないのでコメントアウトしました */
     /* display: block; */
-    width: 100%;
-    height: 100%;
+    width: 80px;
+    height: 80px;
 }
 
-/* ul */
-.navlist {
-    width: 80%;
-    /* もともとついていた余白をとりました */
-    margin: 0;
-    padding: 0;
-    /* メニューを横並びにしました */
+nav {
     display: flex;
-    /* メニューの並び方を設定しました */
-    justify-content: flex-end;
-    /* 箇条書きの点を消しました */
-    list-style: none;
-    /* フォントのサイズ設定 */
-    font-size: 30px;
-
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
 }
-/* li */
-.navitem a {
-    /* 動画でやっていたのですが意味がわからなかったのでコメントアウトしました */
-    /* display: block; */
-    /* メニューの文字色 */
-    color: beige;
-    /* メニューの文字の背景色 */
-    background-color: rgba(79, 188, 212, 0.574);
-    /* 下線を取りました */
-    text-decoration: none;
-    /* メニュー同士の間隔をあけました */
-    margin: 0 10px;
-    /* 要素の中に幅を持たせました */
-    padding: 5px;
-    /* リンクの背景の角を丸くしました */
-    border-radius: 10px;
-    /* 無職の下線を設定しました */
-    border-bottom: 2px solid transparent;
-    /* 時間差で下線が現れるようにしました */
-    transition: .8s;
 
-
+.navlist {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 30px;
+    padding: 0;
+    
     
 }
+.navitem {
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+.navitem a {
+    color: beige;
+    background-color: rgba(79, 188, 212, 0.574);
+    padding: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    border-bottom: 2px solid transparent;
+    transition: .8s;
+}
+
 .navitem a:hover {
     /* リンクにカーソルを合わせた時の文字色 */
     color: rgb(45, 18, 3);
@@ -141,12 +114,21 @@ header {
     border-bottom: 2px solid rgb(45, 18, 3);
 }
 
+
+
 @media screen and (max-width: 1200px) {
     .navlist {
+        /* フォントサイズの設定 */
         font-size: 50%;
     }
+    .header-logo img {
+        width: 50px;
+        height: 50px;
+    }
+
     
 }
+
 
 
 /* About */
